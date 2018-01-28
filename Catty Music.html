@@ -118,22 +118,22 @@
       display: flex;
   }
 
-  footer div:nth-child(1) {
+  .catty-music-small {
       margin-right: auto;
       display: flex;
   }
 
-  footer div:nth-child(1) img {
+  .catty-music-small img {
       width: 100px;
       padding-right: 10px;
   }
 
-  footer div:nth-child(1) div {
+  .catty-music-small div {
       display: flex;
       flex-direction: column;
   }
 
-  footer div:nth-child(2) {
+  .catty-controls {
       width: 50%;
       display: flex;
       align-items: center;
@@ -173,9 +173,6 @@
           text-align: right;
       }
 
-      footer div:nth-child(1) div {
-          width: 100px;
-      }
   }
   </style>
 </head>
@@ -254,7 +251,7 @@
     </main> <!--to contain the main section of the app-->
 
     <footer> <!--to contain the music control buttons and song details-->
-        <div> <!--current playing informaition-->
+        <div class="catty-music-small"> <!--current playing informaition-->
             <img class = "sm-hide" src="images/cattyboard.jpg" /> <!--Album art-->
             <div>
                 <p>If It Ain't Love</p>
@@ -262,7 +259,7 @@
             </div>
         </div>
 
-        <div> <!--music controls-->
+        <div class="catty-controls"> <!--music controls-->
             <i class="fa fa-step-backward"></i>
             <i class="fa fa-pause"></i>
             <i class="fa fa-step-forward"></i>
