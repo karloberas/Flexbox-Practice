@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Catty Music</title>
+  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <style>
   html, body {
       height: 100%; /*setting this explicitly is important*/
   }
+
   body {
       display: flex; /*flex superpowers activated! */
       flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
@@ -15,10 +18,12 @@
       color: #222;
       font-size: 0.9em;
   }
+
   main {
       flex: 1 0 auto; /*fill the available space*/
       display: flex; /*I just included this! - now a flex container with flex items: sidebar & main content section*/
   }
+
   aside {
       flex: 0 0 40px;
       display: flex; /*Now a flex-container too*/
@@ -28,6 +33,7 @@
       align-items:center;
       background-color: #f2f2f2; /*make me pretty*/
   }
+
   aside i.fa {
       font-size: 0.9em; /*font size for the icons*/
   }
@@ -128,20 +134,54 @@
   }
 
   footer div:nth-child(2) {
-      flex: 0 0 50%;
+      width: 50%;
       display: flex;
       align-items: center;
       justify-content: space-around;
-
   }
+  
+  @media screen and (max-width: 64em) {
+      .sm-hide {
+          display: none;
+      }
 
+      .music-head {
+          flex-direction: column;
+          align-items: center;
+          flex: 0 0 auto;
+      }
+
+      .music-head img {
+          width: 150px;
+      }
+
+      .catty-music {
+          padding-left: 0;
+          text-align: center;
+      }
+
+      .catty-music div:nth-child(1) p:first-child {
+          font-size: 1em;
+          margin: 20px 0; 
+      }
+
+      .music-list li p {
+          flex: 0 0 50%;
+      }
+
+      .music-list li p:nth-child(3) {
+          text-align: right;
+      }
+
+      footer div:nth-child(1) div {
+          width: 100px;
+      }
+  }
   </style>
-
-  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     <main>
-        <aside> <!--This represents the sidebar and contained in it are icon sets from font-awesome-->
+        <aside class="sm-hide"> <!--This represents the sidebar and contained in it are icon sets from font-awesome-->
             <i class="fa fa-bars"></i>
             <i class="fa fa-home"></i>
             <i class="fa fa-search"></i>
@@ -158,9 +198,9 @@
 
                 <section class="catty-music"> <!--other details of the album-->
                     <div>
-                        <p>CattyBoard Top 100 Single Charts (11.06.36)</p>
-                        <p>Unknown Artist</p>
-                        <p>2016 . Charts . 100 songs</p>
+                        <p class="sm-resize">CattyBoard Top 100 Single Charts (11.06.36)</p>
+                        <p class="sm-hide">Unknown Artist</p>
+                        <p class="sm-hide">2016 . Charts . 100 songs</p>
                     </div>
 
                     <div> <!--Music controls-->
@@ -175,39 +215,39 @@
             <ul class="music-list">  
                 <li>
                     <p>1. One Dance</p>
-                    <p>Crake feat CatKid &amp; Cyla</p>
+                    <p class="sm-hide">Crake feat CatKid &amp; Cyla</p>
                     <p>2:54</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
                 <li>
                     <p>2. Panda</p>
-                    <p>Cattee</p>
+                    <p class="sm-hide">Cattee</p>
                     <p>4:06</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
                 <li>
                     <p>3. Can't Stop the Feeling!</p>
-                    <p>Catin Cimberlake</p>
+                    <p class="sm-hide">Catin Cimberlake</p>
                     <p>3:56</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
                 <li>
                     <p>4. Work From Home</p>
-                    <p>Cat Harmony feat Colla</p>
+                    <p class="sm-hide">Cat Harmony feat Colla</p>
                     <p>3:34</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
                 <li>
                     <p>5. One Dance</p>
-                    <p>Crake feat CatKid & Cyla</p>
+                    <p class="sm-hide">Crake feat CatKid & Cyla</p>
                     <p>2:54</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
                 <li>
                     <p>6. Panda</p>
-                    <p>Cattee</p>
+                    <p class="sm-hide">Cattee</p>
                     <p>4:06</p>
-                    <p><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
+                    <p class="sm-hide"><span class="catty-cloud">CATTY CLOUD SYNC</span></p>
                 </li>
               </ul>
         </section>
@@ -215,7 +255,7 @@
 
     <footer> <!--to contain the music control buttons and song details-->
         <div> <!--current playing informaition-->
-            <img src="images/cattyboard.jpg" /> <!--Album art-->
+            <img class = "sm-hide" src="images/cattyboard.jpg" /> <!--Album art-->
             <div>
                 <p>If It Ain't Love</p>
                 <p>Catson Derulo</p>
