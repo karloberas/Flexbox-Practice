@@ -1,0 +1,360 @@
+<html>
+<head>
+    <title>Flex Containers</title>
+    <style>
+        ul {
+            list-style: none;
+            border: 1px solid red;
+            padding: 0;
+            background-color: #e8e8e9;
+        }
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: #8cacea;
+            margin: 8px;
+            padding: 4px;
+        }
+        ul.display-flex {
+            display: flex;
+        }
+        ul.display-inline-flex {
+            display: inline-flex;
+        }
+        ul.flex-direction-row-reverse {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        ul.flex-direction-column {
+            display: inline-flex;
+            flex-direction: column;
+        }
+        ul.flex-wrap-nowrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        ul.flex-wrap-wrap {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        ul.flex-wrap-wrap-reverse {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
+        }
+        ul.justify-content-flex-start {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+        ul.justify-content-flex-end {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+        ul.justify-content-center {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+        ul.justify-content-space-between {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+        ul.justify-content-space-around {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+        ul.align-items-flex-start {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-start; /* for columns or cross axis*/
+        }
+        ul.align-items-flex-end {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: flex-end;
+        }
+        ul.align-items-center {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+        }
+        ul.align-items-baseline {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline;
+        }
+        ul.align-content-flex-stretch {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: stretch; /* for multiple lines */
+        }
+        ul.align-content-flex-start {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-start; /* for multiple lines */
+        }
+        ul.align-content-flex-end {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: flex-end; /* for multiple lines */
+        }
+        ul.align-content-center {
+            display: flex;
+            flex-flow: row wrap;
+            align-content: center; /* for multiple lines */
+        }
+    </style>
+</head>
+<body>
+    <ul class="display-flex"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="display-inline-flex"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="flex-direction-row-reverse"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="flex-direction-column"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="flex-wrap-nowrap"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="flex-wrap-wrap"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="flex-wrap-wrap-reverse"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="justify-content-flex-start"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="justify-content-flex-end"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="justify-content-center"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="justify-content-space-between"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="justify-content-space-around"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="align-items-flex-start"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li style="height:150px;">2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="align-items-flex-end"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li style="height:150px;">2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="align-items-center"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li style="height:150px;">2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+    </ul>
+    <ul class="align-items-baseline"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li style="height:150px;">2</li> <!--second child element-->
+        <li style="font-size:2em">3</li> <!--third child element-->
+    </ul>
+    <ul class="align-content-flex-stretch" style="height:400px;"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="align-content-flex-start" style="height:400px;"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="align-content-flex-end" style="height:400px;"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+    <ul class="align-content-center" style="height:400px;"> <!--parent element-->
+        <li>1</li> <!--first child element-->
+        <li>2</li> <!--second child element-->
+        <li>3</li> <!--third child element-->
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+    </ul>
+</body>
+</html>

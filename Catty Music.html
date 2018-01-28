@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catty Music</title>
+  <style>
+  html, body {
+      height: 100%; /*setting this explicitly is important*/
+  }
+  body {
+      display: flex; /*flex superpowers activated! */
+      flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
+      background-color: #fff;
+      margin: 0;
+      font-family: Lato, sans-serif;
+      color: #222;
+      font-size: 0.9em;
+  }
+  main {
+      flex: 1 0 auto; /*fill the available space*/
+      display: flex; /*I just included this! - now a flex container with flex items: sidebar & main content section*/
+  }
+  aside {
+      flex: 0 0 40px;
+      display: flex; /*Now a flex-container too*/
+      flex-direction: column; /*stack icons vertically*/
+      /*since direction is changed, this works on the vertical direction*/
+      justify-content: space-around;
+      align-items:center;
+      background-color: #f2f2f2; /*make me pretty*/
+  }
+  aside i.fa {
+      font-size: 0.9em; /*font size for the icons*/
+  }
+  footer {
+      flex: 0 0 90px; /*don't grow or shrink - just stay at a height of 90px.*/
+      padding: 10px;
+      color: #fff;
+      background-color: rgba(61, 100, 158, .9);
+  }
+
+  </style>
+
+  <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <main>
+        <aside> <!--This represents the sidebar and contained in it are icon sets from font-awesome-->
+            <i class="fa fa-bars"></i>
+            <i class="fa fa-home"></i>
+            <i class="fa fa-search"></i>
+            <i class="fa fa-volume-up"></i>
+            <i class="fa fa-user"></i>
+            <i class="fa fa-spotify"></i>
+            <i class="fa fa-cog"></i>
+            <i class="fa fa-soundcloud"></i>
+        </aside>
+        <section class="content"> <!--This section will house everything other than the sidebar-->
+        </section>
+    </main> <!--to contain the main section of the app-->
+
+    <footer></footer> <!--to contain the music control buttons and song details-->
+</body>
+</html>

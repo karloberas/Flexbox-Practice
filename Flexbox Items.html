@@ -1,0 +1,126 @@
+<html>
+<head>
+    <title>Flex Items</title>
+    <style>
+        ul {
+            list-style: none;
+            border: 1px solid red;
+            padding: 0;
+            background-color: #e8e8e9;
+            display: flex;
+        }
+        li {
+            background-color: #8cacea;
+            margin: 8px;
+            padding: 4px;
+        }
+        ul.order li:nth-child(1) {
+            order: 1; /*give it a value higher than 0*/
+        }
+        ul.order li:nth-child(2) {
+            order: 2; /*give it a value higher than 0*/
+        }
+        ul.flex-grow li {
+            flex-grow: 1;
+        }
+        ul.flex-basis li {
+            flex-basis: 150px;
+        }
+        ul.flex-shorthand-0-1 li {
+            flex: 0 1 auto;
+        }
+        ul.flex-shorthand-0-0 li {
+            flex: 0 0 auto;
+        }
+        ul.flex-shorthand-1-1 li {
+            flex: 1 1 auto;
+        }
+        ul.flex-positive-number li:nth-child(1) {
+            flex: 2 1 0; /*same as just writing flex: 2*/
+        }
+        /*second flex-item*/
+        ul.flex-positive-number li:nth-child(2){
+            flex: 1 1 0;
+        }
+        ul.align-items {
+            justify-content: space-between;
+            align-items: stretch; /*affects all flex-items*/
+            min-height: 50%;
+        }
+
+        ul.margin-auto li {
+            flex: 0 0 auto;
+        }
+
+        ul.margin-auto li:nth-child(1) {
+            margin-right: auto; /*justify-content won't work */
+            margin-left: auto;
+        }
+        ul.flex-direction-column {
+            flex-direction: column;
+        }
+        ul.flex-direction-column li {
+            width: 100px;
+            flex-basis: 100px;
+        }
+        ul.align-items-center {
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <ul class="order">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>                          
+    </ul>
+
+    <ul class="flex-grow">
+        <li>I am a simple list</li>
+    </ul>
+
+    <ul class="flex-basis">
+        <li>I am a simple list</li>
+    </ul>
+    <ul class="flex-shorthand-0-1">
+        <li>I am a simple list</li>
+        <li>I am a loooooooooooooooooooooooooooooooooooooooooooooooooong list</li>
+    </ul>
+    <ul class="flex-shorthand-0-0">
+        <li>I am a simple list</li>
+        <li>I am a loooooooooooooooooooooooooooooooooooooooooooooooooong list</li>
+    </ul>
+    <ul class="flex-shorthand-1-1">
+        <li>I am a simple list</li>
+        <li>I am a loooooooooooooooooooooooooooooooooooooooooooooooooong list</li>
+    </ul>
+    <ul class="flex-positive-number">
+        <li>I am One</li>
+        <li>I am Two</li>
+    </ul>
+    <ul class="align-items">
+        <li>I am One</li>
+        <li>I am Two</li>
+        <li>I am Three</li>
+    </ul>
+    <ul class="margin-auto">
+        <li>Branding</li>
+        <li>Home</li>
+        <li>Services</li>
+        <li>About</li>
+        <li>Contact</li>
+    </ul>
+    <ul class="flex-direction-column">
+        <li>I am One</li>
+        <li>I am Two</li>
+        <li>I am Three</li>
+    </ul>
+    <ul class="align-items-center">
+        <li>I am One</li>
+        <li>I am Two</li>
+        <li>I am Three</li>
+    </ul>
+</body>
+</html>
